@@ -44,3 +44,8 @@ class Game:
 
             if not self.lost:
                 hero.draw()
+    def displayText(self, text):
+        pygame.font.init()
+        font = pygame.font.SysFont('Arial', 50)
+        textsurface = font.render(text, False, (255, 255, 255))
+        self.screen.blit(textsurface, (100, 100))
