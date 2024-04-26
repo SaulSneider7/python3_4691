@@ -33,3 +33,4 @@ class Game:
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE and not self.lost:
                     self.rockets.append(Rocket(self, hero.x, hero.y))
             
+            hola estoy en mi computadora
