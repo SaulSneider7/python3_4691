@@ -56,3 +56,7 @@ class Alien:
         self.game = game
         self.y = y 
         self.size = 30
+
+    def draw(self):
+        pygame.draw.rect(self.game.screen, (81, 43, 88), pygame.Rect(self.x, self.y, self.size, self.size))
+        self.y += 0.05
