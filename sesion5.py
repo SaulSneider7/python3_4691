@@ -110,5 +110,7 @@ class Rocket:
     
     def draw(self):
         pygame.draw.rect(self.game.screen,(254, 52, 110), pygame.Rect(self.x , self.y, 2, 4))
-
         self.y -= 2
+
+if __name__ == "__main__":
+    game = Game(600, 400)
