@@ -1,5 +1,9 @@
 import pygame
 
+
+"""
+CREAMOS LA CLASE GAME
+"""
 class Game:
     screen = None
     aliens = []
@@ -50,6 +54,11 @@ class Game:
         textsurface = font.render(text, False, (255, 255, 255))
         self.screen.blit(textsurface, (100, 100))
 
+
+
+"""
+CREAMOS LA CLASE ALIEN
+"""
 class Alien:
     def __init__(self, game, x, y):
         self.x = x
@@ -70,3 +79,15 @@ class Alien:
 
                 game.rockets.remove(rocket)
                 game.aliens.remove(self)
+
+"""
+CREAMOS LA CLASE HERO
+"""
+class Hero:
+    def __init__(self, game, x, y):
+        self.x = x
+        self.game = game
+        self.y = y
+    
+    def draw(self):
+        pygame.draw.rect(self.game.screen,(210, 250, 251),pygame.Rect(self.x, self.y, 8, 5))
