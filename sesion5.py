@@ -49,3 +49,10 @@ class Game:
         font = pygame.font.SysFont('Arial', 50)
         textsurface = font.render(text, False, (255, 255, 255))
         self.screen.blit(textsurface, (100, 100))
+
+class Alien:
+    def __init__(self, game, x, y):
+        self.x = x
+        self.game = game
+        self.y = y 
+        self.size = 30
